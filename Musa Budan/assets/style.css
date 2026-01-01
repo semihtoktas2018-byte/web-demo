@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #111;
+}
+
+.kap {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.ust {
+  background: #0b0f14;
+  color: #fff;
+}
+
+.ust .kap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu a {
+  color: #bbb;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+.hero {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+.hero-ic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #444;
+}
+
+.hero-gorsel img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.bolum {
+  padding: 80px 0;
+}
+
+.bolum h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.kartlar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.kart {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+
+.kart img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.kart h3 {
+  margin-bottom: 10px;
+}
+
+.alt {
+  background: #0b0f14;
+  color: #aaa;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+}

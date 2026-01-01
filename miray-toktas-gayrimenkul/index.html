@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miray Toktaş Gayrimenkul</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+body{background:#f5f5f5;color:#222}
+
+/* HEADER */
+header{
+  background:#000;
+  padding:14px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header .logo{
+  color:#ff7a00;
+  font-size:20px;
+  font-weight:700;
+}
+header nav a{
+  color:#fff;
+  margin-left:18px;
+  text-decoration:none;
+  font-size:14px;
+}
+header nav a:hover{color:#ff7a00}
+
+/* HERO */
+.hero{
+  max-width:1200px;
+  margin:50px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+/* PROFIL */
+.profile{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:22px;
+}
+.profile img{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #ff7a00;
+}
+.profile strong{color:#ff7a00;font-size:16px}
+
+/* HERO TEXT */
+.hero h1{
+  font-size:34px;
+  color:#ff7a00;
+  margin-bottom:14px;
+}
+.hero p{
+  font-size:15px;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+.buttons a{
+  display:inline-block;
+  padding:12px 20px;
+  margin-right:10px;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:14px;
+}
+.call{background:#ff7a00;color:#fff}
+.wp{background:#000;color:#fff}
+
+/* HERO IMAGE */
+.hero-img img{
+  width:100%;
+  border-radius:16px;
+  object-fit:cover;
+}
+
+/* VITRIN */
+.vitrin{
+  max-width:1200px;
+  margin:60px auto;
+  padding:0 20px;
+}
+.vitrin h2{
+  text-align:center;
+  font-size:28px;
+  color:#ff7a00;
+  margin-bottom:30px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.card{
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+.card:hover{transform:translateY(-6px)}
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+.card div{
+  padding:18px;
+}
+.card h3{
+  color:#ff7a00;
+  margin-bottom:8px;
+}
+.card p{
+  font-size:14px;
+  color:#555;
+}
+.card a{
+  display:block;
+  margin-top:12px;
+  text-align:center;
+  padding:10px;
+  background:#000;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+}
+.card a:hover{background:#ff7a00}
+
+/* FOOTER */
+footer{
+  background:#000;
+  color:#aaa;
+  text-align:center;
+  padding:22px 10px;
+  font-size:13px;
+}
+footer a{color:#ff7a00;text-decoration:none}
+
+/* MOBILE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Miray Toktaş Gayrimenkul</div>
+  <nav>
+    <a href="#">Anasayfa</a>
+    <a href="#">Hizmetler</a>
+    <a href="#">İletişim</a>
+  </nav>
+</header>
+
+<section class="hero">
+
+  <div>
+    <div class="profile">
+      <img src="danisman.jpg" alt="Miray Toktaş">
+      <div>
+        <strong>Miray Toktaş</strong><br>
+        Gayrimenkul Danışmanı
+      </div>
+    </div>
+
+    <h1>Güvenilir Gayrimenkul Danışmanlığı</h1>
+    <p>
+      Bursa merkez ve dağ ilçelerinde konut, arsa ve ticari gayrimenkul
+      alım-satım süreçlerinde doğru fiyat, doğru yer ve güvenilir işlem.
+    </p>
+
+    <div class="buttons">
+      <a href="tel:+905555555555" class="call">Hemen Ara</a>
+      <a href="https://wa.me/905555555555" class="wp">WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <img src="konut.jpg" alt="Konut">
+  </div>
+
+</section>
+
+<section class="vitrin">
+  <h2>Satış Vitrini</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="konut.jpg" alt="Konut">
+      <div>
+        <h3>Konut • Daire</h3>
+        <p>Satılık ve kiralık daire, villa ve konutlar.</p>
+        <a href="#">İlanları Gör</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="bag-bahce.jpg" alt="Arsa">
+      <div>
+        <h3>Bağ • Bahçe • Arsa</h3>
+        <p>Tarla, arsa ve yatırımlık araziler.</p>
+        <a href="#">İlanları Gör</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="fabrika.jpg" alt="Fabrika">
+      <div>
+        <h3>Fabrika • İşyeri</h3>
+        <p>Ticari ve sanayi gayrimenkulleri.</p>
+        <a href="#">İlanları Gör</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  Bu web altyapısı <b>DELİ-VERİ</b> veri sistemleri tarafından geliştirilmiştir.<br>
+  <a href="https://bamironlinestore.com" target="_blank">bamironlinestore.com</a>
+</footer>
+
+</body>
+</html>
