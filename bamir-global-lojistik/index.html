@@ -2,208 +2,59 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="genişlik=cihaz-genişlik, başlangıç-ölçeği=1.0">
   <title>BAMİR Global Lojistik</title>
 
   <style>
-    *{kutu-boyutlandırma:border-box;margin:0;padding:0}
-    gövde{
-      arka-plan:#05070c;
-      renk:#eaf0ff;
-      yazı-tipi:Arial,Helvetica,sans-serif;
+    body{
+      margin:0;
+      background:#000;
+      color:#fff;
+      font-family:Arial, Helvetica, sans-serif;
     }
-
-    üst{
-      arka-plan:#000;
-      dolgu:20px 40px;
-      görüntü:esnek;
-      justify-content:boşluk-arası;
-      hizalama-dikey:orta;
+    h1{
+      color:#4fd1ff;
     }
-
-    üst h1{
-      renk:#4dd0ff;
-      font-boyutu:24px;
+    .kutu{
+      display:flex;
+      gap:20px;
+      margin-top:30px;
     }
-
-    üst nav a{
-      renk:#fff;
-      metin-süsleme:yok;
-      sol-boşluk:20px;
-      font-boyutu:14px;
-    }
-
-    .hero{
-      dolgu:80px 40px;
-      max-genişlik:1200px;
-      margin:auto;
-      görüntü:ızgara;
-      ızgara-sütunları:1fr 1fr;
-      boşluk:40px;
-      hizalama-dikey:orta;
-    }
-
-    .hero h2{
-      font-boyutu:48px;
-      satır-yüksekliği:1.2;
-      renk:#6ad3ff;
-    }
-
-    .hero p{
-      üst-boşluk:20px;
-      font-boyutu:18px;
-      renk:#cfd8ff;
-    }
-
-    .butonlar{
-      üst-boşluk:30px;
-    }
-
-    .buton{
-      görüntü:inline-blok;
-      dolgu:14px 24px;
-      kenar-yuvarlatma:10px;
-      arka-plan:#4dd0ff;
-      renk:#000;
-      metin-süsleme:yok;
-      sağ-boşluk:15px;
-      font-ağırlığı:kalın;
-    }
-
-    .buton.siyah{
-      arka-plan:#000;
-      renk:#fff;
-      kenar:1px solid #4dd0ff;
-    }
-
-    .hero img{
-      genişlik:100%;
-      kenar-yuvarlatma:20px;
-    }
-
-    .vitrin{
-      max-genişlik:1200px;
-      margin:60px auto;
-      dolgu:0 40px;
-    }
-
-    .vitrin h3{
-      metin-hizalama:orta;
-      font-boyutu:32px;
-      alt-boşluk:40px;
-      renk:#4dd0ff;
-    }
-
-    .kartlar{
-      görüntü:ızgara;
-      ızgara-sütunları:tekrar(4,1fr);
-      boşluk:25px;
-    }
-
     .kart{
-      arka-plan:#0b1020;
-      dolgu:20px;
-      kenar-yuvarlatma:16px;
+      background:#111;
+      padding:15px;
+      border-radius:10px;
+      width:220px;
     }
-
     .kart img{
-      genişlik:100%;
-      kenar-yuvarlatma:12px;
-      alt-boşluk:15px;
-    }
-
-    .kart h4{
-      renk:#9f7cff;
-      alt-boşluk:10px;
-    }
-
-    .kart p{
-      font-boyutu:14px;
-      renk:#cfd8ff;
-    }
-
-    alt{
-      arka-plan:#000;
-      dolgu:30px;
-      metin-hizalama:orta;
-      font-boyutu:13px;
-      renk:#aaa;
-      üst-boşluk:60px;
-    }
-
-    @media (max-genişlik:900px){
-      .hero{ızgara-sütunları:1fr}
-      .kartlar{ızgara-sütunları:1fr}
+      width:100%;
+      border-radius:8px;
     }
   </style>
 </head>
 
-<gövde>
+<body>
 
-  <üst>
-    <h1>BAMİR Global Lojistik</h1>
-    <nav>
-      <a href="#">Anasayfa</a>
-      <a href="#">Hizmetler</a>
-      <a href="#">İletişim</a>
-    </nav>
-  </üst>
+  <h1>BAMİR Global Lojistik</h1>
+  <p>Güçlü taşıma. Güvenli lojistik.</p>
 
-  <section class="hero">
-    <div>
-      <h2>Güçlü Taşıma.<br>Güvenli Lojistik.</h2>
-      <p>
-        Ulusal ve bölgesel lojistik operasyonlarında modern filo,
-        güçlü altyapı ve kurumsal disiplinle hizmet veriyoruz.
-      </p>
+  <div class="kutu">
 
-      <div class="butonlar">
-        <a href="#" class="buton">Hemen Teklif Al</a>
-        <a href="#" class="buton siyah">WhatsApp</a>
-      </div>
+    <div class="kart">
+      <img src="depo.jpg">
+      <p>Depolama</p>
     </div>
 
-    <div>
-      <img src="./tir3.jpg" alt="BAMİR Global Lojistik TIR">
+    <div class="kart">
+      <img src="kamyonet1.jpg">
+      <p>Şehir İçi Dağıtım</p>
     </div>
-  </section>
 
-  <section class="vitrin">
-    <h3>Hizmet Vitrini</h3>
-
-    <div class="kartlar">
-
-      <div class="kart">
-        <img src="./depo.jpg" alt="Depolama">
-        <h4>Depolama & Aktarma</h4>
-        <p>Modern tesislerde güvenli kısa ve uzun süreli depolama.</p>
-      </div>
-
-      <div class="kart">
-        <img src="./tir1.jpg" alt="Uzun Yol">
-        <h4>Uzun Yol Taşımacılığı</h4>
-        <p>Yurt içi ve bölgesel ağır yük taşımacılığı.</p>
-      </div>
-
-      <div class="kart">
-        <img src="./kamyonet1.jpg" alt="Kamyonet">
-        <h4>Şehir İçi Dağıtım</h4>
-        <p>Hızlı ve esnek kamyonet dağıtım çözümleri.</p>
-      </div>
-
-      <div class="kart">
-        <img src="./tir2.jpg" alt="Filo">
-        <h4>Filo Yönetimi</h4>
-        <p>Bakımlı araçlar ve profesyonel sürücü kadrosu.</p>
-      </div>
-
+    <div class="kart">
+      <img src="tir1.jpg">
+      <p>Uzun Yol Taşımacılığı</p>
     </div>
-  </section>
 
-  <alt>
-    © 2026 BAMİR Global Lojistik<br>
-    BAMİR Online Store’s
-  </alt>
+  </div>
 
-</gövde>
+</body>
 </html>
