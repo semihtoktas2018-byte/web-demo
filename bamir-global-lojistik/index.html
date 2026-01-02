@@ -1,230 +1,209 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BAMİR Global Lojistik</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="genişlik=cihaz-genişlik, başlangıç-ölçeği=1.0">
+  <title>BAMİR Global Lojistik</title>
 
-<style>
-:root{
-  --bg:#05060a;
-  --panel:#0b0f1a;
-  --neon:#4fd1ff;
-  --neon2:#b16cff;
-  --text:#eaeaf0;
-  --muted:#9aa3b2;
-}
+  <style>
+    *{kutu-boyutlandırma:border-box;margin:0;padding:0}
+    gövde{
+      arka-plan:#05070c;
+      renk:#eaf0ff;
+      yazı-tipi:Arial,Helvetica,sans-serif;
+    }
 
-*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+    üst{
+      arka-plan:#000;
+      dolgu:20px 40px;
+      görüntü:esnek;
+      justify-content:boşluk-arası;
+      hizalama-dikey:orta;
+    }
 
-body{
-  background:var(--bg);
-  color:var(--text);
-}
+    üst h1{
+      renk:#4dd0ff;
+      font-boyutu:24px;
+    }
 
-header{
-  background:#000;
-  padding:18px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    üst nav a{
+      renk:#fff;
+      metin-süsleme:yok;
+      sol-boşluk:20px;
+      font-boyutu:14px;
+    }
 
-header h1{
-  color:var(--neon);
-  font-size:22px;
-  letter-spacing:1px;
-}
+    .hero{
+      dolgu:80px 40px;
+      max-genişlik:1200px;
+      margin:auto;
+      görüntü:ızgara;
+      ızgara-sütunları:1fr 1fr;
+      boşluk:40px;
+      hizalama-dikey:orta;
+    }
 
-nav a{
-  color:#fff;
-  margin-left:20px;
-  text-decoration:none;
-  font-size:14px;
-}
+    .hero h2{
+      font-boyutu:48px;
+      satır-yüksekliği:1.2;
+      renk:#6ad3ff;
+    }
 
-.hero{
-  max-width:1200px;
-  margin:60px auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
-  padding:0 20px;
-}
+    .hero p{
+      üst-boşluk:20px;
+      font-boyutu:18px;
+      renk:#cfd8ff;
+    }
 
-.hero h2{
-  font-size:38px;
-  background:linear-gradient(90deg,var(--neon),var(--neon2));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-bottom:20px;
-}
+    .butonlar{
+      üst-boşluk:30px;
+    }
 
-.hero p{
-  color:var(--muted);
-  line-height:1.6;
-  margin-bottom:25px;
-}
+    .buton{
+      görüntü:inline-blok;
+      dolgu:14px 24px;
+      kenar-yuvarlatma:10px;
+      arka-plan:#4dd0ff;
+      renk:#000;
+      metin-süsleme:yok;
+      sağ-boşluk:15px;
+      font-ağırlığı:kalın;
+    }
 
-.btns a{
-  display:inline-block;
-  padding:12px 22px;
-  margin-right:10px;
-  border-radius:8px;
-  text-decoration:none;
-  font-size:14px;
-}
+    .buton.siyah{
+      arka-plan:#000;
+      renk:#fff;
+      kenar:1px solid #4dd0ff;
+    }
 
-.btn-primary{
-  background:linear-gradient(90deg,var(--neon),var(--neon2));
-  color:#000;
-}
+    .hero img{
+      genişlik:100%;
+      kenar-yuvarlatma:20px;
+    }
 
-.btn-dark{
-  background:#000;
-  color:#fff;
-  border:1px solid #222;
-}
+    .vitrin{
+      max-genişlik:1200px;
+      margin:60px auto;
+      dolgu:0 40px;
+    }
 
-.hero img{
-  width:100%;
-  border-radius:18px;
-  box-shadow:0 0 40px rgba(79,209,255,.25);
-}
+    .vitrin h3{
+      metin-hizalama:orta;
+      font-boyutu:32px;
+      alt-boşluk:40px;
+      renk:#4dd0ff;
+    }
 
-.section{
-  max-width:1200px;
-  margin:80px auto;
-  padding:0 20px;
-}
+    .kartlar{
+      görüntü:ızgara;
+      ızgara-sütunları:tekrar(4,1fr);
+      boşluk:25px;
+    }
 
-.section h3{
-  text-align:center;
-  font-size:26px;
-  margin-bottom:40px;
-  color:var(--neon);
-}
+    .kart{
+      arka-plan:#0b1020;
+      dolgu:20px;
+      kenar-yuvarlatma:16px;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-}
+    .kart img{
+      genişlik:100%;
+      kenar-yuvarlatma:12px;
+      alt-boşluk:15px;
+    }
 
-.card{
-  background:var(--panel);
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 0 25px rgba(0,0,0,.6);
-}
+    .kart h4{
+      renk:#9f7cff;
+      alt-boşluk:10px;
+    }
 
-.card img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
+    .kart p{
+      font-boyutu:14px;
+      renk:#cfd8ff;
+    }
 
-.card .c-body{
-  padding:18px;
-}
+    alt{
+      arka-plan:#000;
+      dolgu:30px;
+      metin-hizalama:orta;
+      font-boyutu:13px;
+      renk:#aaa;
+      üst-boşluk:60px;
+    }
 
-.card h4{
-  color:var(--neon2);
-  margin-bottom:8px;
-}
-
-.card p{
-  font-size:14px;
-  color:var(--muted);
-}
-
-footer{
-  background:#000;
-  margin-top:100px;
-  padding:25px 15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-}
-
-footer a{
-  color:var(--neon);
-  text-decoration:none;
-}
-</style>
+    @media (max-genişlik:900px){
+      .hero{ızgara-sütunları:1fr}
+      .kartlar{ızgara-sütunları:1fr}
+    }
+  </style>
 </head>
 
-<body>
+<gövde>
 
-<header>
-  <h1>BAMİR Global Lojistik</h1>
-  <nav>
-    <a href="#">Anasayfa</a>
-    <a href="#">Hizmetler</a>
-    <a href="#">İletişim</a>
-  </nav>
-</header>
+  <üst>
+    <h1>BAMİR Global Lojistik</h1>
+    <nav>
+      <a href="#">Anasayfa</a>
+      <a href="#">Hizmetler</a>
+      <a href="#">İletişim</a>
+    </nav>
+  </üst>
 
-<section class="hero">
-  <div>
-    <h2>Güçlü Taşıma. Güvenli Lojistik.</h2>
-    <p>
-      Ulusal ve bölgesel lojistik operasyonlarında modern filo,
-      güçlü altyapı ve kurumsal disiplinle hizmet veriyoruz.
-    </p>
-    <div class="btns">
-      <a class="btn-primary" href="#">Hemen Teklif Al</a>
-      <a class="btn-dark" href="#">WhatsApp</a>
+  <section class="hero">
+    <div>
+      <h2>Güçlü Taşıma.<br>Güvenli Lojistik.</h2>
+      <p>
+        Ulusal ve bölgesel lojistik operasyonlarında modern filo,
+        güçlü altyapı ve kurumsal disiplinle hizmet veriyoruz.
+      </p>
+
+      <div class="butonlar">
+        <a href="#" class="buton">Hemen Teklif Al</a>
+        <a href="#" class="buton siyah">WhatsApp</a>
+      </div>
     </div>
-  </div>
 
-  <img src="tir4.jpg" alt="BAMİR Global Lojistik TIR">
-</section>
+    <div>
+      <img src="./tir3.jpg" alt="BAMİR Global Lojistik TIR">
+    </div>
+  </section>
 
-<section class="section">
-  <h3>Hizmet Vitrini</h3>
+  <section class="vitrin">
+    <h3>Hizmet Vitrini</h3>
 
-  <div class="grid">
-    <div class="card">
-      <img src="depo.jpg" alt="Depolama">
-      <div class="c-body">
+    <div class="kartlar">
+
+      <div class="kart">
+        <img src="./depo.jpg" alt="Depolama">
         <h4>Depolama & Aktarma</h4>
         <p>Modern tesislerde güvenli kısa ve uzun süreli depolama.</p>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="tir1.jpg" alt="Uzun Yol">
-      <div class="c-body">
+      <div class="kart">
+        <img src="./tir1.jpg" alt="Uzun Yol">
         <h4>Uzun Yol Taşımacılığı</h4>
         <p>Yurt içi ve bölgesel ağır yük taşımacılığı.</p>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="kamyonet1.jpg" alt="Kamyonet">
-      <div class="c-body">
+      <div class="kart">
+        <img src="./kamyonet1.jpg" alt="Kamyonet">
         <h4>Şehir İçi Dağıtım</h4>
         <p>Hızlı ve esnek kamyonet dağıtım çözümleri.</p>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="tir2.jpg" alt="Filo">
-      <div class="c-body">
+      <div class="kart">
+        <img src="./tir2.jpg" alt="Filo">
         <h4>Filo Yönetimi</h4>
         <p>Bakımlı araçlar ve profesyonel sürücü kadrosu.</p>
       </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  © 2026 BAMİR Global Lojistik<br>
-  Bu web altyapısı <b>DELİ-VERİ</b> veri sistemleri tarafından geliştirilmiştir.<br>
-  <a href="https://bamironlinestore.com" target="_blank">bamironlinestore.com</a>
-</footer>
+  <alt>
+    © 2026 BAMİR Global Lojistik<br>
+    BAMİR Online Store’s
+  </alt>
 
-</body>
+</gövde>
 </html>
